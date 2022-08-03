@@ -1,0 +1,23 @@
+package com.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Summary_page {
+	public static WebDriver driver;
+
+	@FindBy(xpath = "//a[@class='button btn btn-default standard-checkout button-medium']")
+	private WebElement proceed_to_checkout;
+	public Summary_page(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver,this);
+	}
+	public WebElement getProceed_to_checkout() {
+		return proceed_to_checkout;
+	}
+
+	}
+
+
